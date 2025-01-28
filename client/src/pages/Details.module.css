@@ -1,0 +1,14 @@
+.detail-description {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  color: gray;
+}
+
+.progress {
+  height: 0.4rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}

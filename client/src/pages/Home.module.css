@@ -1,0 +1,40 @@
+.search {
+  border: 1.5px solid black;
+}
+
+.card {
+  margin: 1rem 0;
+  border: #8080807f;
+  box-shadow: 3px 3px 8px 1px #8080802e;
+}
+.image-wrapper {
+  width: 100%;
+  height: 12rem;
+  overflow: hidden;
+}
+
+.save-button {
+  background-color: rgb(225, 184, 131);
+  border: none;
+  color: black;
+  font-family: sans-serif;
+}
+.save-button:hover {
+  background-color: rgb(148, 104, 48);
+}
+.save-button:disabled {
+  background-color: rgba(225, 184, 131, 0.475);
+  color: black;
+}
+.details-button {
+  background-color: #ff9800;
+  border-color: #ff9800;
+}
+.details-button:hover {
+  background-color: #a66503;
+  border-color: #a66503;
+}
+
+.card-button {
+  margin: 0 0.5rem 0 0;
+}
