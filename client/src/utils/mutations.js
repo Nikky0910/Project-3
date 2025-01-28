@@ -17,31 +17,49 @@ mutation AddUser($username: String!, $email: String!, $password: String!) {
 }
 `
 
-export const SAVE_BOOK=gql`
-mutation SaveBook($book: BookInput!) {
-  saveBook(book: $book) {
-    savedBooks {
-      authors
-      description
-      bookId
-      image
-      link
-      title
+export const SAVE_BREED=gql`
+mutation SaveBreed($breed: BreedInput!) {
+  saveBreed(breed: $breed) {
+    savedBreeds {
+      name
+      image_link
+      origin
+      family_friendly
+      shedding
+      general_health
+      playfulness
+      children_friendly
+      grooming
+      intelligence
+      other_pets_friendly
+      min_weight
+      max_weight
+      min_life_expectancy
+      max_life_expectancy
     }
   }
 }
 `
 
-export const REMOVE_BOOK=gql`
-mutation RemoveBook($bookId: ID!) {
-  removeBook(bookId: $bookId) {
-    savedBooks {
-      authors
-      description
-      bookId
-      image
-      link
-      title
+export const REMOVE_BREED=gql`
+mutation RemoveBreed($name: String!) {
+  removeBreed(name: $name) {
+    savedBreeds {
+      name
+      image_link
+      origin
+      family_friendly
+      shedding
+      general_health
+      playfulness
+      children_friendly
+      grooming
+      intelligence
+      other_pets_friendly
+      min_weight
+      max_weight
+      min_life_expectancy
+      max_life_expectancy
     }
   }
 }
