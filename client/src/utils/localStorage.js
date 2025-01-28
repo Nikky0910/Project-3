@@ -1,30 +1,30 @@
-export const getSavedBookIds = () => {
-  const savedBookIds = localStorage.getItem('saved_books')
-    ? JSON.parse(localStorage.getItem('saved_books'))
+export const getSavedCatBreeds = () => {
+  const savedBreedNames = localStorage.getItem('saved_names')
+    ? JSON.parse(localStorage.getItem('saved_names'))
     : [];
 
-  return savedBookIds;
+  return savedBreedNames;
 };
 
-export const saveBookIds = (bookIdArr) => {
-  if (bookIdArr.length) {
-    localStorage.setItem('saved_books', JSON.stringify(bookIdArr));
+export const saveBreedNames = (breeds) => {
+  if (breeds.length) {
+    localStorage.setItem('saved_names', JSON.stringify(breeds));
   } else {
-    localStorage.removeItem('saved_books');
+    localStorage.removeItem('saved_names');
   }
 };
 
-export const removeBookId = (bookId) => {
-  const savedBookIds = localStorage.getItem('saved_books')
-    ? JSON.parse(localStorage.getItem('saved_books'))
+export const removeBreedName = (breedName) => {
+  const savedBreedNames = localStorage.getItem('saved_names')
+    ? JSON.parse(localStorage.getItem('saved_names'))
     : null;
 
-  if (!savedBookIds) {
+  if (!savedBreedNames) {
     return false;
   }
 
-  const updatedSavedBookIds = savedBookIds?.filter((savedBookId) => savedBookId !== bookId);
-  localStorage.setItem('saved_books', JSON.stringify(updatedSavedBookIds));
+  const updatedSavedBreedNames = savedBreedNames?.filter((savedBreedName) => savedBreedName !== breedName);
+  localStorage.setItem('saved_names', JSON.stringify(updatedSavedBreedNames));
 
   return true;
 };

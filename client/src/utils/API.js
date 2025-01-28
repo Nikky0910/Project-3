@@ -1,57 +1,56 @@
-// route to get logged in user's info (needs the token)
-export const getMe = (token) => {
-  return fetch('/api/users/me', {
+// make a search to cat's api
+// https://api.api-ninjas.com/v1/cats?name=Abyssinian
+export const searchCatBreed = (query) => {
+  return fetch(`https://api.api-ninjas.com/v1/cats?name=${query}`, {
     headers: {
-      'Content-Type': 'application/json',
-      authorization: `Bearer ${token}`,
+      "X-Api-Key": "klNzjI7v9eHRO+eVjMir0w==PECa7kj8fM8ZYDXw",
     },
   });
 };
 
-export const createUser = (userData) => {
-  return fetch('/api/users', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(userData),
-  });
-};
+export const getCatBreeds = async () => {
+  const breeds = [
+    "Aegean",
+    "Abyssinian",
+    // "American Bobtail",
+    // "American Curl",
+    // "American Shorthair",
+    // "American Wirehair",
+    // "Bengal",
+    // "Birman",
+    // "British Shorthair",
+    // "Burmese",
+    // "Chartreux",
+    // "Cornish Rex",
+    // "Devon Rex",
+    // "Egyptian Mau",
+    // "Havana Brown",
+    // "Japanese Bobtail",
+    // "Korat",
+    // "Maine Coon",
+    // "Manx",
+    // "Norwegian Forest",
+    // "Ocicat",
+    // "Oriental",
+    // "Persian",
+    // "Sphynx",
+  ];
 
-export const loginUser = (userData) => {
-  return fetch('/api/users/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(userData),
-  });
-};
+  let breedFeatures = [];
 
-// save book data for a logged in user
-export const saveBook = (bookData, token) => {
-  return fetch('/api/users', {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-      authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify(bookData),
-  });
-};
+  for (const breed of breeds) {
+    const response = await fetch(
+      `https://api.api-ninjas.com/v1/cats?name=${breed}`,
+      {
+        headers: {
+          "X-Api-Key": "klNzjI7v9eHRO+eVjMir0w==PECa7kj8fM8ZYDXw",
+        },
+      }
+    );
 
-// remove saved book data for a logged in user
-export const deleteBook = (bookId, token) => {
-  return fetch(`/api/users/books/${bookId}`, {
-    method: 'DELETE',
-    headers: {
-      authorization: `Bearer ${token}`,
-    },
-  });
-};
+    const data = await response.json();
+    breedFeatures.push(data[0]);
+  }
 
-// make a search to google books api
-// https://www.googleapis.com/books/v1/volumes?q=harry+potter
-export const searchGoogleBooks = (query) => {
-  return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+  return breedFeatures;
 };
