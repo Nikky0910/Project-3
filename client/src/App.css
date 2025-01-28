@@ -8,10 +8,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik Mono One', sans-serif;
+  font-family: sans-serif
 }
 
 .small {
   font-weight: 300;
   font-style: italic;
+}
+.navbar-brand {
+  font-size: 2rem;
+}
+.progress-bar {
+  background-color: #0b6d69;
 }
