@@ -1,9 +1,8 @@
-const { User, Thought } = require('../models');
-const { signToken, AuthenticationError } = require('../utils/auth');
+const { User, Thought } = require("../models");
+const { signToken, AuthenticationError } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
@@ -18,6 +17,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -35,35 +35,33 @@ const resolvers = {
 
       return { token, user };
     },
-    saveBook: async (parent, { book }, context) => {
+
+    saveBreed: async (parent, { breed }, context) => {
       if (context.user) {
+        const user = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { savedBreeds:breed } }
+        );
+        console.log(user);
         
 
-       const user= await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { savedBooks: book } }
-        );
-
         return user;
       }
       throw AuthenticationError;
-      ('You need to be logged in!');
+      ("You need to be logged in!");
     },
- 
-    removeBook: async (parent, { bookId }, context) => {
+
+    removeBreed: async (parent, { name }, context) => {
       if (context.user) {
-       
-
-      const user=  await User.findOneAndUpdate(
+        const user = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { savedBooks:  {bookId} } }
+          { $pull: { savedBreeds: { name } } }
         );
 
         return user;
       }
       throw AuthenticationError;
     },
-   
   },
 };
 
