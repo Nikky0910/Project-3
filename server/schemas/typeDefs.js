@@ -4,31 +4,27 @@ const typeDefs = `
     username: String
     email: String
     password: String
-    savedBooks: [Book]!
-    bookCount: Int
-  }
-  type Book {
-   authors:[String]
-   description:String
-   bookId:String
-   image:String
-   link:String
-   title:String
-  
-  }
-  type Thought {
-    _id: ID
-    thoughtText: String
-    thoughtAuthor: String
-    createdAt: String
-    comments: [Comment]!
+    savedBreeds: [Breed]!
+    breedCount: Int
   }
 
-  type Comment {
+  type Breed {
     _id: ID
-    commentText: String
-    commentAuthor: String
-    createdAt: String
+    name:String
+    image_link:String
+    origin: String
+    family_friendly: Int
+    shedding:Int
+    general_health: Int
+    playfulness: Int
+    children_friendly: Int
+    grooming: Int
+    intelligence: Int
+    other_pets_friendly: Int
+    min_weight: Int
+    max_weight: Int
+    min_life_expectancy: Int
+    max_life_expectancy: Int
   }
 
   type Auth {
@@ -36,28 +32,36 @@ const typeDefs = `
     user: User
   }
 
-  input BookInput{
-    authors:[String]
-    description:String
-    bookId: String
-    image: String
-    link: String
-    title:String
+  input BreedInput {
+    name:String
+    image_link:String
+    origin: String
+    family_friendly: Int
+    shedding:Int
+    general_health: Int
+    playfulness: Int
+    children_friendly: Int
+    grooming: Int
+    intelligence: Int
+    other_pets_friendly: Int
+    min_weight: Int
+    max_weight: Int
+    min_life_expectancy: Int
+    max_life_expectancy: Int
   }
+
   type Query {
- 
     me: User
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
-    
+
     login(email: String!, password: String!): Auth
 
-    saveBook(book: BookInput!): User
+    saveBreed(breed: BreedInput!): User
 
-    removeBook(bookId: ID!): User
-    
+    removeBreed(name: String!): User
   }
 `;
 
