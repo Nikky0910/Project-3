@@ -1,8 +1,8 @@
-# MERN Stack Single-Page Application
+# Final Project- Cat Shelter
 
-## Project Overview
+## Description
 
-This project is a MERN-stack single-page application designed to address a real-world challenge using data-driven insights and user-centric features. The application is built with a focus on seamless interactivity, polished design, and modern development practices. It demonstrates proficiency in problem-solving and technical skills essential for industry-standard development.
+This project is designed as a user-friendly platform for individuals looking to adopt a cat. Its purpose is to connect potential pet parents with shelter cats by providing detailed information about the available breeds and their specific traits. Each breed will have a dedicated page with essential details such as personality traits, care requirements, health considerations, and compatibility with different households (e.g., families with kids, other pets, or first-time owners). 
 
 ## Key Features
 
@@ -15,19 +15,6 @@ This project is a MERN-stack single-page application designed to address a real-
 - **Responsiveness:** Designed to adapt seamlessly across devices and screen sizes.
 - **Security:** Sensitive API key information securely managed on the server.
 
-## User Story
-
-**As a [specific user role or type],**
-- I want [specific functionality or outcome],
-- So that [specific benefit or solution achieved].
-
-## Acceptance Criteria
-
-- The application must allow users to [key feature 1].
-- Users can securely [key feature 2].
-- The UI must be polished, responsive, and intuitive.
-- All core functionalities must integrate seamlessly with the back end.
-- Data interactions should support CRUD (Create, Read, Update, Delete) operations.
 
 ## Technologies Used
 
@@ -50,18 +37,18 @@ This project is a MERN-stack single-page application designed to address a real-
 - Render
 
 ### Other Tools
-- CSS for styling
+- CSS and React-Bootstrap for styling
 - JavaScript for logic and interactivity
 
 ## Installation Instructions
 
 1. Clone the repository:
    ```bash
-   git clone [repository URL]
+   git clone https://github.com/Nikky0910/Project-3
    ```
 2. Navigate to the project directory:
    ```bash
-   cd [project-directory]
+   cd Project-3
    ```
 3. Install dependencies for the server and client:
    ```bash
@@ -104,13 +91,6 @@ project-directory/
 |-- package.json
 ```
 
-## Code Quality Standards
-
-- Adheres to modern JavaScript best practices.
-- Follows consistent naming conventions for files, classes, and IDs.
-- Includes meaningful comments for code clarity.
-- Maintains proper indentation and formatting across all files.
-
 ## Contributions
 
 Contributions to this project are welcome! Please follow the guidelines below:
@@ -129,12 +109,20 @@ Contributions to this project are welcome! Please follow the guidelines below:
    ```
 5. Submit a pull request.
 
+## Usage
+
+Link to the GitHub repository:
+
+<a href = "https://github.com/Nikky0910/Project-3"> Github Repo</a>
+
+Link to the deployed application: 
+
+<a href = "https://chall14-tech-blog.onrender.com"> Cat Shelter website</a>
+
+The live website should look as follows:
+
+
+
 ## License
 
-This project is licensed under the [License Name] License. See the LICENSE file for details.
-
-## Acknowledgments
-
-- Special thanks to [instructors, team members, or other contributors].
-- [Any additional acknowledgments or references].
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
