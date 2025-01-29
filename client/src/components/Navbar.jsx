@@ -16,7 +16,7 @@ const AppNavbar = () => {
         <Container fluid>
           <Navbar.Brand as={Link} to="/">
             <Image className="mx-2" src="/pet_icon.svg" />
-              CATS 
+              CAT HAVEN
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar" />
           <Navbar.Collapse id="navbar" className="d-flex flex-row-reverse">
