@@ -13,6 +13,10 @@
   overflow: hidden;
 }
 
+/* .card-img-top{
+  object-fit: contain;
+} */
+
 .save-button {
   background-color: rgb(225, 184, 131);
   border: none;
@@ -37,4 +41,31 @@
 
 .card-button {
   margin: 0 0.5rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin: 0.5rem 0;
+    max-width: 100%;
+  }
+  .image-wrapper {
+    height: 10rem;
+  }
+  .search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin: 0.25rem 0;
+    max-width: 100%;
+  }
+  .image-wrapper {
+    height: 8rem;
+    object-fit: contain;
+  }
+  .search {
+    width: 100%;
+  }
 }

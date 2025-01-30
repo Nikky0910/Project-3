@@ -1,7 +1,7 @@
 .detail-description {
   font-size: 0.7rem;
   line-height: 1rem;
-  color: gray;
+  color: rgb(95, 95, 95);
 }
 
 .progress {
@@ -11,4 +11,30 @@
 h5 {
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .detail-description {
+    font-size: 0.6rem;
+    line-height: 0.9rem;
+  }
+  .progress {
+    height: 0.3rem;
+  }
+  h5 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-description {
+    font-size: 0.5rem;
+    line-height: 0.8rem;
+  }
+  .progress {
+    height: 0.2rem;
+  }
+  h5 {
+    font-size: 0.7rem;
+  }
 }
