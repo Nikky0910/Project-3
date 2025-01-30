@@ -117,10 +117,13 @@ Link to the GitHub repository:
 
 Link to the deployed application: 
 
-<a href = "https://chall14-tech-blog.onrender.com"> Cat Shelter website</a>
+<a href = "https://project-3-8krb.onrender.com"> Cat Shelter website</a>
 
 The live website should look as follows:
 
+![alt text](./client/src/assets/images/Homepage.png)
+![alt text](./client/src/assets/images/Details.png)
+![alt text](./client/src/assets/images/Saved-breeds.png) 
 
 
 ## License
