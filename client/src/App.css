@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #8ab6d6; 
+  --secondary-color: #f7c6a3; 
+  --background-color: #f0f4f8; 
+  --text-color: #4a4a4a; 
+  --font-family: 'Rubik', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h3, h4, h6 {
+  font-family: 'Rubik', sans-serif;
+  color: var(--primary-color);
+}
+
+h2, h5 {
+  font-family: 'Rubik', sans-serif;
+  color: var(--text-color);
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.navbar-brand:hover {
+  color: var(--secondary-color);
+}
+
+.nav-link {
+  color: var(--primary-color);
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .nav-link {
+    font-size: 0.8rem;
+  }
+}
